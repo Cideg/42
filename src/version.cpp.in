@@ -1,6 +1,6 @@
 #define DEF_MONERO_VERSION_TAG "@VERSIONTAG@"
-#define DEF_MONERO_VERSION "0.00.42-master"
-#define DEF_MONERO_RELEASE_NAME "Widely regarded as a bad decision"
+#define DEF_MONERO_VERSION "0.01.42-master"
+#define DEF_MONERO_RELEASE_NAME "The Answer"
 #define DEF_MONERO_VERSION_FULL DEF_MONERO_VERSION "-" DEF_MONERO_VERSION_TAG
 
 #include "version.h"
