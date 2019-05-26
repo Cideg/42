@@ -6230,7 +6230,8 @@ int wallet2::get_fee_algorithm() const
 //------------------------------------------------------------------------------------------------------------------------------
 uint64_t wallet2::get_min_ring_size() const
 {
-  if (use_fork_rules(8, 10))
+  return 3;
+  /*if (use_fork_rules(8, 10))
     return 11;
   if (use_fork_rules(7, 10))
     return 7;
@@ -6238,14 +6239,15 @@ uint64_t wallet2::get_min_ring_size() const
     return 5;
   if (use_fork_rules(2, 10))
     return 3;
-  return 0;
+  return 0;*/
 }
 //------------------------------------------------------------------------------------------------------------------------------
 uint64_t wallet2::get_max_ring_size() const
 {
-  if (use_fork_rules(8, 10))
-    return 13;
-  return 0;
+  return 13;
+  //if (use_fork_rules(8, 10))
+  //  return 13;
+  //return 0;
 }
 //------------------------------------------------------------------------------------------------------------------------------
 uint64_t wallet2::adjust_mixin(uint64_t mixin) const

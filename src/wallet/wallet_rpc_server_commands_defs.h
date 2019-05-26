@@ -416,8 +416,6 @@ namespace wallet_rpc
       uint32_t account_index;
       std::set<uint32_t> subaddr_indices;
       uint32_t priority;
-      uint64_t mixin;
-      uint64_t ring_size;
       uint64_t unlock_time;
       std::string payment_id;
       bool get_tx_key;
@@ -430,8 +428,6 @@ namespace wallet_rpc
         KV_SERIALIZE(account_index)
         KV_SERIALIZE(subaddr_indices)
         KV_SERIALIZE(priority)
-        KV_SERIALIZE_OPT(mixin, (uint64_t)0)
-        KV_SERIALIZE_OPT(ring_size, (uint64_t)0)
         KV_SERIALIZE(unlock_time)
         KV_SERIALIZE(payment_id)
         KV_SERIALIZE(get_tx_key)
@@ -473,8 +469,6 @@ namespace wallet_rpc
       uint32_t account_index;
       std::set<uint32_t> subaddr_indices;
       uint32_t priority;
-      uint64_t mixin;
-      uint64_t ring_size;
       uint64_t unlock_time;
       std::string payment_id;
       bool get_tx_keys;
@@ -487,8 +481,6 @@ namespace wallet_rpc
         KV_SERIALIZE(account_index)
         KV_SERIALIZE(subaddr_indices)
         KV_SERIALIZE(priority)
-        KV_SERIALIZE_OPT(mixin, (uint64_t)0)
-        KV_SERIALIZE_OPT(ring_size, (uint64_t)0)
         KV_SERIALIZE(unlock_time)
         KV_SERIALIZE(payment_id)
         KV_SERIALIZE(get_tx_keys)
@@ -702,8 +694,6 @@ namespace wallet_rpc
       uint32_t account_index;
       std::set<uint32_t> subaddr_indices;
       uint32_t priority;
-      uint64_t mixin;
-      uint64_t ring_size;
       uint64_t outputs;
       uint64_t unlock_time;
       std::string payment_id;
@@ -718,8 +708,6 @@ namespace wallet_rpc
         KV_SERIALIZE(account_index)
         KV_SERIALIZE(subaddr_indices)
         KV_SERIALIZE(priority)
-        KV_SERIALIZE_OPT(mixin, (uint64_t)0)
-        KV_SERIALIZE_OPT(ring_size, (uint64_t)0)
         KV_SERIALIZE_OPT(outputs, (uint64_t)1)
         KV_SERIALIZE(unlock_time)
         KV_SERIALIZE(payment_id)
@@ -770,8 +758,6 @@ namespace wallet_rpc
     {
       std::string address;
       uint32_t priority;
-      uint64_t mixin;
-      uint64_t ring_size;
       uint64_t outputs;
       uint64_t unlock_time;
       std::string payment_id;
@@ -784,8 +770,6 @@ namespace wallet_rpc
       BEGIN_KV_SERIALIZE_MAP()
         KV_SERIALIZE(address)
         KV_SERIALIZE(priority)
-        KV_SERIALIZE_OPT(mixin, (uint64_t)0)
-        KV_SERIALIZE_OPT(ring_size, (uint64_t)0)
         KV_SERIALIZE_OPT(outputs, (uint64_t)1)
         KV_SERIALIZE(unlock_time)
         KV_SERIALIZE(payment_id)
