@@ -86,9 +86,9 @@ typedef cryptonote::simple_wallet sw;
 
 #define EXTENDED_LOGS_FILE "wallet_details.log"
 
-#define DEFAULT_MIX 10
+#define DEFAULT_MIX 12
 
-#define MIN_RING_SIZE 11 // Used to inform user about min ring size -- does not track actual protocol
+#define MIN_RING_SIZE 13 // Used to inform user about min ring size -- does not track actual protocol
 
 #define LOCK_IDLE_SCOPE() \
   bool auto_refresh_enabled = m_auto_refresh_enabled.load(std::memory_order_relaxed); \
@@ -1888,11 +1888,6 @@ bool simple_wallet::set_default_ring_size(const std::vector<std::string> &args/*
       return true;
     }
  
-    if (ring_size != 0 && ring_size != DEFAULT_MIX+1)
-      message_writer() << tr("WARNING: this is a non default ring size, which may harm your privacy. Default is recommended.");
-    else if (ring_size == DEFAULT_MIX)
-      message_writer() << tr("WARNING: from v8, ring size will be fixed and this setting will be ignored.");
-
     const auto pwd_container = get_and_verify_password();
     if (pwd_container)
     {
