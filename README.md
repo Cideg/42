@@ -104,7 +104,7 @@ Debian / Ubuntu one liner for all dependencies
 
 Clone recursively to pull-in needed submodule(s):
 
-`$ git clone --recursive https://github.com/FourtyTwo/42`
+`$ git clone --recursive https://github.com/42v3/42.git`
 
 If you already have a repo cloned, initialize and update:
 
@@ -116,6 +116,8 @@ If you already have a repo cloned, initialize and update:
 invokes cmake commands as needed.
 
 #### On Linux and OS X
+
+ $ sudo apt-get install -y libhidapi-libusb0
 
 * Install the dependencies
 * Change to the root of the source code directory, update submodules, and build:
